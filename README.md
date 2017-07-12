@@ -1,6 +1,6 @@
 # duct-viz
 
-A Leiningen plugin to present a dependency diagram of [Duct framework](https://github.com/duct-framework/duct) based app.
+A Leiningen plugin to present a dependency diagram of [Duct framework](https://github.com/duct-framework/duct) based app, using [Graphviz](http://www.graphviz.org/).
 
 ## Usage
 
