@@ -39,7 +39,7 @@
   "Visualizes Duct system using Graphviz."
   [project & args]
   (when-let [{:keys [duct-file output-file vertical]} (parse-cli-options "duct-viz" cli-options args)]
-    (eval-in-project (project/merge-profiles project [{:dependencies [['duct-viz "0.1.0-SNAPSHOT"]]}])
+    (eval-in-project (project/merge-profiles project [{:dependencies [['duct-viz "0.1.0"]]}])
                      `(-> (clojure.java.io/resource ~duct-file)
                           (duct.core/read-config)
                           (duct.core/prep)
