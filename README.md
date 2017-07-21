@@ -11,7 +11,8 @@ $ lein duct-viz -m
 Usage: lein duct-viz [options]
     
 Options:
-  -d, --duct-file DUCT_FILE      config.edn  Duct config file.
+  -c, --config-file CONFIG_FILE  config.edn  Duct config file.
+  -d, --dev                                  Use :dev profile.
   -o, --output-file OUTPUT_FILE  system.png  Output file path, png image.
   -v, --vertical                             Use vertical layout.
   -m, --man                                  Help.
