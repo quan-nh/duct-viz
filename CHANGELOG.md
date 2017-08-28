@@ -2,6 +2,7 @@
 
 ## 0.1.2-SNAPSHOT - 2017-08-28
 - Update change from duct/core 0.6.
+- :pass-through-help
 
 ## 0.1.1-SNAPSHOT - 2017-07-21
 - Add --dev option.

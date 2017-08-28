@@ -7,7 +7,7 @@ A Leiningen plugin to present a dependency diagram of [Duct framework](https://g
 Put `[duct-viz "0.1.2-SNAPSHOT"]` into the `:plugins` vector of your project.clj.
 
 ```bash
-$ lein duct-viz -m
+$ lein duct-viz -h
 Usage: lein duct-viz [options]
     
 Options:
@@ -15,7 +15,7 @@ Options:
   -d, --dev                                  Use :dev profile.
   -o, --output-file OUTPUT_FILE  system.png  Output file path, png image.
   -v, --vertical                             Use vertical layout.
-  -m, --man                                  Help.
+  -h, --help                                 Help.
 ```
 
 Here's an example of a project using `lein new duct foo +api +ataraxy +example +sqlite` template:

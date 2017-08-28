@@ -12,7 +12,7 @@
    ["-o" "--output-file OUTPUT_FILE" "Output file path, png image."
     :default "system.png"]
    ["-v" "--vertical" "Use vertical layout."]
-   ["-m" "--man" "Help."]])
+   ["-h" "--help" "Help."]])
 
 (defn- usage
   [command summary errors]
@@ -32,12 +32,13 @@
   returns the parsed options."
   [command cli-options args]
   (let [{:keys [options errors summary]} (cli/parse-opts args cli-options)]
-    (if (or (:man options) errors)
+    (if (or (:help options) errors)
       (usage command summary errors)
       options)))
 
 (defn duct-viz
   "Visualizes Duct system using Graphviz."
+  {:pass-through-help true}
   [project & args]
   (when-let [{:keys [config-file dev output-file vertical]} (parse-cli-options "duct-viz" cli-options args)]
     (eval-in-project
