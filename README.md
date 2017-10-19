@@ -5,7 +5,7 @@ A Leiningen plugin to present a dependency diagram of [Duct framework](https://g
 
 ## Usage
 
-Put `[duct-viz "0.1.2"]` into the `:plugins` vector of your project.clj.
+Put `[duct-viz "0.1.3"]` into the `:plugins` vector of your project.clj.
 
 ```bash
 $ lein duct-viz -h

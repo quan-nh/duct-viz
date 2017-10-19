@@ -43,11 +43,11 @@
   (when-let [{:keys [config-file dev output-file vertical]} (parse-cli-options "duct-viz" cli-options args)]
     (eval-in-project
       (cond-> project
-              true (project/merge-profiles [{:dependencies [['duct-viz "0.1.2"]]}])
+              true (project/merge-profiles [{:dependencies [['duct-viz "0.1.3"]]}])
               dev (project/merge-profiles [:dev]))
       `(-> (clojure.java.io/resource ~config-file)
            (duct.core/read-config)
-           (duct.core/prep)
+           (duct.core/prep [:duct/compiler])
            (integrant.core/dependency-graph)
            (leiningen.duct-viz.graph/save (some? ~vertical) ~output-file))
       '(do (require 'duct.core 'integrant.core 'leiningen.duct-viz.graph)

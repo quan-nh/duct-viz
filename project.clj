@@ -1,4 +1,4 @@
-(defproject duct-viz "0.1.2"
+(defproject duct-viz "0.1.3"
   :description "Visualizes Duct system using Graphviz."
   :url "https://github.com/tentamen/duct-viz"
   :license {:name "Eclipse Public License"
