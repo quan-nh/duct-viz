@@ -43,7 +43,7 @@
   (when-let [{:keys [config-file dev output-file vertical]} (parse-cli-options "duct-viz" cli-options args)]
     (eval-in-project
       (cond-> project
-              true (project/merge-profiles [{:dependencies [['duct-viz "0.1.2-SNAPSHOT"]]}])
+              true (project/merge-profiles [{:dependencies [['duct-viz "0.1.2"]]}])
               dev (project/merge-profiles [:dev]))
       `(-> (clojure.java.io/resource ~config-file)
            (duct.core/read-config)

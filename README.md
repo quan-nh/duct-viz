@@ -1,10 +1,11 @@
 # duct-viz
+[![Clojars Project](https://img.shields.io/clojars/v/duct-viz.svg)](https://clojars.org/duct-viz)
 
 A Leiningen plugin to present a dependency diagram of [Duct framework](https://github.com/duct-framework/duct) based app, using [Graphviz](http://www.graphviz.org/).
 
 ## Usage
 
-Put `[duct-viz "0.1.2-SNAPSHOT"]` into the `:plugins` vector of your project.clj.
+Put `[duct-viz "0.1.2"]` into the `:plugins` vector of your project.clj.
 
 ```bash
 $ lein duct-viz -h
